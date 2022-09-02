@@ -1,7 +1,7 @@
 
-public class ShoppingCart<Item> implements ShoppingCartInterface<Item> {
+public class ShoppingCart {
 
-	private ResizableArrayBag<Item> cart = new ResizableArrayBag<Item>();
+	private ResizableArrayBag<Item> cart; // = new ResizableArrayBag<Item>();
 
 	/**
 	 * Creates an empty cart whose capacity is 25. 
@@ -68,7 +68,7 @@ public class ShoppingCart<Item> implements ShoppingCartInterface<Item> {
 	{
 		
 		return cart.remove(anEntry);
-	}//end remove(T anEntry)
+	}//end remove(Item anEntry)
 
 	/**
 	 * This method removes all entries from the shopping cart.
@@ -120,10 +120,7 @@ public class ShoppingCart<Item> implements ShoppingCartInterface<Item> {
 	 */
 	public double getPriceOf(Item anEntry) 
 	{
-		Item myItem = new Item();
-		myItem = anEntry;
-		
-		return myItem.getPrice();
+		return anEntry.getPrice();
 	}//end getPriceOf
 
 	/**

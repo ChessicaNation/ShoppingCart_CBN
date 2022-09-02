@@ -18,12 +18,12 @@ public class Application
 		// ============================= Testing the ShoppingCart Class Methods ================================
 		
 		//testing empty-argument constructor
-		ShoppingCartInterface<Item> shoppingCart1 = new ShoppingCart<Item>();
-		displayCart(shoppingCart1);
+		ShoppingCart shoppingCart1 = new ShoppingCart();
+		//displayCart(shoppingCart1);
 		
 		//testing preferred constructor
-		ShoppingCartInterface<Item> shoppingCart2 = new ShoppingCart<Item>(3);
-		displayCart(shoppingCart2);
+		ShoppingCart shoppingCart2 = new ShoppingCart(3);
+		//displayCart(shoppingCart2);
 		
 		//testing add (used in testAdd method below)
 		System.out.println("Testing the add method to add a few items to ShoppingCart1.");
@@ -103,7 +103,7 @@ public class Application
 	}//end main
 		
 		
-		private static void testAdd(ShoppingCartInterface<Item> shoppingCart, Item[] content)
+		private static void testAdd(ShoppingCart shoppingCart, Item[] content)
 		{
 			System.out.println("Adding to the cart: ");
 			for(int index = 0; index < content.length; index++)
@@ -116,7 +116,7 @@ public class Application
 			displayCart(shoppingCart);
 		}//end testAdd
 	
-		private static void displayCart(ShoppingCartInterface<Item> shoppingCart)
+		private static void displayCart(ShoppingCart shoppingCart)
 		{
 			System.out.println("The shopping cart contains " + shoppingCart.getCurrentNumber() 
 								+ " item(s), including:");
