@@ -1,5 +1,7 @@
 /**
 * This class represents items that can be placed in a shopping cart.
+* CS215ON
+* Assignment 1.1
 * @author Chessica Nation
 */
 public class Item
@@ -54,7 +56,7 @@ public class Item
 	 */
 	public double getPrice() 
 	{
-		return price;
+		return price * (1 - discount);
 	}//end getPrice
 
 	/**
@@ -83,8 +85,6 @@ public class Item
 	public void setDiscount(double discount) 
 	{
 		this.discount = discount;
-		
-		this.price = price * (1 - discount);
 	}//end setDiscount
 
 	@Override
